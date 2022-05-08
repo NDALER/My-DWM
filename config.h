@@ -65,6 +65,7 @@ static const Rule rules[] = {
    /* class      instance    title       tags mask     isfloating  isterminal  noswallow monitor */
    { "Gimp",     NULL,       NULL,       1 << 3,       0,          0,           0,       -1 },
    { "firefox",  NULL,       NULL,       1 << 4,       0,          0,          -1,       -1 },
+   { "qutebrowser", NULL,    NULL,       1 << 4,       0,          0,          -1,       -1 },
    { "inscape",  NULL,       NULL,       1 << 3,       0,          0,           0,       -1 },
    { "Anki",     NULL,       NULL,       1 << 3,       0,          0,           1,       -1 },
    { "st",       NULL,       NULL,       0,            0,          1,           0,       -1 },
@@ -112,7 +113,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray2, "-nf", col_white, "-sb", col_pink, "-sf", col_white, NULL };
+/* static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray2, "-nf", col_white, "-sb", col_pink, "-sf", col_white, NULL }; */
+static const char *dmenucmd[] = { "dmenu_run",NULL };
 static const char *termcmd[]  = { "st", NULL };
 #include "shift-tools.c"
 //function keys, its on /usr/include/X11/XF86keysym.h
@@ -134,9 +136,9 @@ static Key keys[] = {
    { MODKEY,                       XK_b,      togglebar,      {0} },
    { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
    { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
-	{ MODKEY,                       XK_Prior,  movestack,      {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
+   { MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
+   { MODKEY,                       XK_Prior,  movestack,      {.i = -1 } },
+   { MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
    { MODKEY,                       XK_Next,   movestack,      {.i = +1 } },
    { MODKEY,                       XK_apostrophe, incnmaster, {.i = +1 } },
    { MODKEY,                       XK_semicolon, incnmaster,  {.i = -1 } },
@@ -237,7 +239,7 @@ static Button buttons[] = {
    { ClkClientWin,   MODKEY,    Button1, movemouse,      {0} },
    { ClkClientWin,   MODKEY,    Button2, togglefloating, {0} },
    { ClkClientWin,   MODKEY,    Button3, resizemouse,    {0} },
-  { ClkClientWin,   MODKEY|ShiftMask, Button3, killclient, {0} },
+   { ClkClientWin,   MODKEY|ShiftMask, Button3, killclient, {0} },
    { ClkTagBar,      0,         Button1, view,           {0} },
    { ClkTagBar,      0,         Button3, toggleview,     {0} },
    { ClkTagBar,      MODKEY,    Button1, tag,            {0} },
@@ -245,4 +247,3 @@ static Button buttons[] = {
    { ClkWinTitle,   0,          Button4, shiftviewclients, { .i = +1 } },
    { ClkWinTitle,   0,          Button5, shiftviewclients, { .i = -1 } },
 };
-

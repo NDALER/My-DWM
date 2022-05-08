@@ -1,7 +1,5 @@
-*.o
-*.rej
-*.orig
-*.def.h
-dwm
-d?m
+*.o*
+*.rej*
+*.orig*
+*.def.h*
 *test*
