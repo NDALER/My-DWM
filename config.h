@@ -143,7 +143,7 @@ static Key keys[] = {
    { MODKEY,                       XK_apostrophe, incnmaster, {.i = +1 } },
    { MODKEY,                       XK_semicolon, incnmaster,  {.i = -1 } },
    { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-   { MODKEY,	 		            XK_7,      shiftboth,      { .i = -1 }	},
+   { MODKEY,                       XK_7,      shiftboth,      { .i = -1 }	},
    /* { MODKEY|ControlMask,		XK_h,      shiftswaptags,  { .i = -1 }	}, */
    /* { MODKEY|ControlMask,		XK_l,      shiftswaptags,  { .i = +1 }	}, */
    { MODKEY, 	                    XK_8,      shiftboth,      { .i = +1 }	},
@@ -206,14 +206,14 @@ static Key keys[] = {
    TAGKEYS(                        XK_4,                      3)
    TAGKEYS(                        XK_5,                      4)
    { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-   { 0, XF86XK_Explorer,		spawn,	   SHCMD("st -i -e nmtui") }, //fn + f1
+   { 0, XF86XK_Explorer,	   	spawn,	   SHCMD("st -i -e nmtui") }, //fn + f1
    /* { 0, XF86XK_Search,		spawn,	   SHCMD("dunstify -r 1 (echo 'Brightness  = ' ( xbacklight -get | cut -c1-4))") },// fn + f2 */
    /* { 0, XF86XK_Calculator,		spawn,	   SHCMD("dunstify -r 1 (echo 'Brightness  = ' ( xbacklight -get | cut -c1-4))") },// fn + f3 */
-   { 0, XF86XK_Tools,		    spawn,	   SHCMD("st -i -e ncmpcpp") },// fn + f4
-   { 0, XF86XK_AudioPrev,		spawn,	   SHCMD("mpc prev"  ) }, //fn + f5
-   { 0, XF86XK_AudioNext,		spawn,	   SHCMD("mpc next"  ) },// fn + f6
-   { 0, XF86XK_AudioPlay, 		spawn,	   SHCMD("mpc toggle") },// fn + f7
-   { 0, XF86XK_AudioStop,		spawn,	   SHCMD("mpc clear" ) },// fn + f8
+   { 0, XF86XK_Tools,            spawn,	   SHCMD("st -i -e ncmpcpp") },// fn + f4
+   { 0, XF86XK_AudioPrev,        spawn,	   SHCMD("mpc prev"  ) }, //fn + f5
+   { 0, XF86XK_AudioNext,        spawn,	   SHCMD("mpc next"  ) },// fn + f6
+   { 0, XF86XK_AudioPlay,        spawn,	   SHCMD("mpc toggle") },// fn + f7
+   { 0, XF86XK_AudioStop,        spawn,	   SHCMD("mpc clear" ) },// fn + f8
    /* { 0, XF86XK_AudioMute,		spawn,	   SHCMD("dunstify -r 1 (echo 'Brightness  = ' ( xbacklight -get | cut -c1-4))") },// fn + f9 */
    /* { 0, XF86XK_AudioLowerVolume, spawn,       SHCMD("dunstify -r 1 (echo 'Brightness  = ' ( xbacklight -get | cut -c1-4))") },// fn + f10 */
    /* { 0, XF86XK_AudioRaiseVolume, spawn,       SHCMD("dunstify -r 1 (echo 'Brightness  = ' ( xbacklight -get | cut -c1-4))") },// fn + f11 */
