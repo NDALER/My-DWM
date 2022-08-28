@@ -70,6 +70,7 @@ static const Rule rules[] = {
    { "Anki",     NULL,       NULL,       1 << 3,       0,          0,           1,       -1 },
    { "st",       NULL,       NULL,       0,            0,          1,           0,       -1 },
    { "ncmpcpp",  NULL,       NULL,       0,            1,          1,           0,       -1 },
+   { "Thunar",   NULL,       NULL,       1 << 3,       0,          0,          -1,       -1 },
    { NULL,       NULL,   "Event Tester", 0,            0,          0,           1,       -1 }, /* xev */
 };
 
@@ -143,10 +144,10 @@ static Key keys[] = {
    { MODKEY,                       XK_apostrophe, incnmaster, {.i = +1 } },
    { MODKEY,                       XK_semicolon, incnmaster,  {.i = -1 } },
    { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-   { MODKEY,                       XK_7,      shiftboth,      { .i = -1 }	},
+   { MODKEY,                       XK_8,      shiftboth,      { .i = -1 }	},
    /* { MODKEY|ControlMask,		XK_h,      shiftswaptags,  { .i = -1 }	}, */
    /* { MODKEY|ControlMask,		XK_l,      shiftswaptags,  { .i = +1 }	}, */
-   { MODKEY, 	                    XK_8,      shiftboth,      { .i = +1 }	},
+   { MODKEY, 	                    XK_9,      shiftboth,      { .i = +1 }	},
    { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
    { MODKEY,                       XK_m,      setcfact,       {.f = +0.25} },
    { MODKEY,                       XK_comma,  setcfact,       {.f = -0.25} },
