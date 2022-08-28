@@ -242,10 +242,7 @@ static void sigchld(int unused);
 static void spawn(const Arg *arg);
 static void tag(const Arg *arg);
 static void tagmon(const Arg *arg);
-<<<<<<< HEAD
 static void tile(Monitor *m);
-=======
->>>>>>> aa37e3d (patching cfacts)
 static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
 static void togglesticky(const Arg *arg);
@@ -2419,7 +2416,6 @@ updategeom(void)
 				m->mh = m->wh = unique[i].height;
 				updatebarpos(m);
 			}
-<<<<<<< HEAD
 		/* removed monitors if n > nn */
 		for (i = nn; i < n; i++) {
 			for (m = mons; m && m->next; m = m->next);
@@ -2430,7 +2426,6 @@ updategeom(void)
 				c->mon = mons;
 				attach(c);
 				attachstack(c);
-=======
 			for (i = 0, m = mons; i < nn && m; m = m->next, i++)
 				if (i >= n
 				|| unique[i].x_org != m->mx || unique[i].y_org != m->my
@@ -2443,8 +2438,7 @@ updategeom(void)
 					m->mw = m->ww = unique[i].width;
 					m->mh = m->wh = unique[i].height;
 					updatebarpos(m);
-				}
-		} else { /* less monitors available nn < n */
+				} else { /* less monitors available nn < n */
 			for (i = nn; i < n; i++) {
 				for (m = mons; m && m->next; m = m->next);
 				while ((c = m->clients)) {
@@ -2476,14 +2470,14 @@ updategeom(void)
 				if (m == selmon)
 					selmon = mons;
 				cleanupmon(m);
->>>>>>> 2bb04a2 (patching attachdirection)
 			}
 			if (m == selmon)
 				selmon = mons;
 			cleanupmon(m);
 		}
+		} 
 		free(unique);
-	} else
+	} }else
 #endif /* XINERAMA */
 	{ /* default monitor setup */
 		if (!mons)
