@@ -1,7 +1,8 @@
+dwm
 *orig
 *.rej
 drw.o
 dwm.o
 util.o
 drw.o
-dwm
+*def*
