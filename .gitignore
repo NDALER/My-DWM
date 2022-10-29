@@ -1,6 +1,7 @@
-*.o
+*orig
 *.rej
-*.orig
-*.def.h
-*test*
+drw.o
+dwm.o
+util.o
+drw.o
 dwm
