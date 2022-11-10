@@ -115,7 +115,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /* static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray2, "-nf", col_white, "-sb", col_pink, "-sf", col_white, NULL }; */
-static const char *dmenucmd[] = { "dmenu_run",NULL };
+static const char *dmenucmd[] = { "dmenu_run","-l", "0", NULL };
 static const char *termcmd[]  = { "st", NULL };
 #include "shift-tools.c"
 //function keys, its on /usr/include/X11/XF86keysym.h
@@ -228,6 +228,8 @@ static Key keys[] = {
    { MODKEY, 			XK_F10,    spawn,          SHCMD("$HOME/scripts/Custom-scripts/volumedown.fish")},
    { MODKEY, 			XK_F11,    spawn,          SHCMD("$HOME/scripts/Custom-scripts/volumeup.fish")},
    { 0, 		   		XK_Print,  spawn,          SHCMD("$HOME/scripts/Custom-scripts/screenshot.fish")},
+   { MODKEY, 			XK_c,      spawn,          SHCMD("~/scripts/copyfromclip.sh")}, // Copy
+   { MODKEY, 			XK_v,      spawn,          SHCMD("~/scripts/pasteit.sh")}, //Paste
 };
 
 /* button definitions */
