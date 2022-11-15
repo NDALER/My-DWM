@@ -1169,6 +1169,7 @@ grabkeys(void)
 		unsigned int i, j, k;
 		unsigned int modifiers[] = { 0, LockMask, numlockmask, numlockmask|LockMask };
 <<<<<<< HEAD
+<<<<<<< HEAD
 		KeyCode code;
 		KeyCode chain;
 
@@ -1183,6 +1184,8 @@ grabkeys(void)
 						True, GrabModeAsync, GrabModeAsync);
 			}
 =======
+=======
+>>>>>>> a641b7b (patching keychain)
 		int start, end, skip;
 		KeySym *syms;
 
@@ -1201,7 +1204,25 @@ grabkeys(void)
 							 root, True,
 							 GrabModeAsync, GrabModeAsync);
 		XFree(syms);
+<<<<<<< HEAD
 >>>>>>> 89f9905 (grabkeys: Avoid missing events when a keysym maps to multiple keycodes)
+=======
+=======
+		KeyCode code;
+		KeyCode chain;
+
+		XUngrabKey(dpy, AnyKey, AnyModifier, root);
+		for (i = 0; i < LENGTH(keys); i++)
+			if ((code = XKeysymToKeycode(dpy, keys[i].keysym))) {
+				if (keys[i].chain != -1 &&
+					((chain = XKeysymToKeycode(dpy, keys[i].chain))))
+						code = chain;
+				for (j = 0; j < LENGTH(modifiers); j++)
+					XGrabKey(dpy, code, keys[i].mod | modifiers[j], root,
+						True, GrabModeAsync, GrabModeAsync);
+			}
+>>>>>>> 830456d (patching keychain)
+>>>>>>> a641b7b (patching keychain)
 	}
 }
 

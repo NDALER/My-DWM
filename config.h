@@ -122,10 +122,14 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 /* static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray2, "-nf", col_white, "-sb", col_pink, "-sf", col_white, NULL }; */
 static const char *dmenucmd[] = { "dmenu_run","-l", "0", NULL };
 static const char *termcmd[]  = { "st", NULL };
-#include "shift-tools.c"
 
 #include "shift-tools.c"
 
+<<<<<<< HEAD
+#include "shift-tools.c"
+
+=======
+>>>>>>> a641b7b (patching keychain)
 //function keys, its on /usr/include/X11/XF86keysym.h
 #include <X11/XF86keysym.h>
 
@@ -135,8 +139,12 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 <<<<<<< HEAD
+<<<<<<< HEAD
    /* modifier                        chain key    key                 function            argument */
    { MODKEY|ShiftMask,                -1,          XK_b,               toggleborder,       {0} },
+=======
+   /* modifier                        chain key    key                 function            argument */
+>>>>>>> a641b7b (patching keychain)
    { MODKEY,                          -1,          XK_x,               movecenter,         {0} },
    { MODKEY,                          -1,          XK_s,               togglesticky,       {0} },
    { MODKEY,                          -1,          XK_i,               shiftviewclients,   { .i = -1 } },
@@ -185,10 +193,15 @@ static Key keys[] = {
    { MODKEY|ShiftMask,                -1,          XK_minus,           defaultgaps,        {0} },
    { MODKEY,                          -1,          XK_Tab,             view,               {0} },
    { MODKEY,                          -1,          XK_backslash,       view,               {0} },
+<<<<<<< HEAD
    { MODKEY,                          -1,          XK_u,               view,               {0} },
    { MODKEY,                          -1,          XK_Escape,          killclient,         {0} },
    { MODKEY,                          -1,          XK_BackSpace,       killclient,         {0} },
    { MODKEY,                          -1,          XK_y,               killclient,         {0} },
+=======
+   { MODKEY,                          -1,          XK_Escape,          killclient,         {0} },
+   { MODKEY,                          -1,          XK_BackSpace,       killclient,         {0} },
+>>>>>>> a641b7b (patching keychain)
    { MODKEY,                          -1,          XK_t,               setlayout,          {.v = &layouts[0]} },
    /* { MODKEY,                          -1,          XK_f,               setlayout,          {.v = &layouts[1]} }, */
    /* { MODKEY,                          -1,          XK_n,               setlayout,          {.v = &layouts[2]} }, */
@@ -239,6 +252,7 @@ static Key keys[] = {
    { MODKEY,                          XK_v,        XK_c,               spawn,              SHCMD("~/scripts/custom/pastefromclip.sh") },
    { MODKEY,                          XK_c,        XK_b,               spawn,              SHCMD("~/scripts/custom/copytobook.sh") },
    { MODKEY,                          XK_v,        XK_b,               spawn,              SHCMD("~/scripts/custom/pastefrombook.sh") },
+<<<<<<< HEAD
 =======
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_o, shiftviewclients,    { .i = +1 } },
@@ -322,6 +336,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 >>>>>>> ac57794 (patching shift-tools)
+=======
+>>>>>>> a641b7b (patching keychain)
 };
 
 /* button definitions */
