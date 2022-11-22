@@ -62,16 +62,17 @@ static const Rule rules[] = {
     * WM_CLASS(STRING) = instance, class
     * WM_NAME(STRING) = title
         */
-   /* class      instance    title       tags mask     isfloating  isterminal  noswallow monitor */
-   { "Gimp",     NULL,       NULL,       1 << 3,       0,          0,           0,       -1 },
-   { "firefox",  NULL,       NULL,       1 << 4,       0,          0,          -1,       -1 },
-   { "qutebrowser", NULL,    NULL,       1 << 4,       0,          0,          -1,       -1 },
-   { "inscape",  NULL,       NULL,       1 << 3,       0,          0,           0,       -1 },
-   { "Anki",     NULL,       NULL,       1 << 3,       0,          0,           1,       -1 },
-   { "st",       NULL,       NULL,       0,            0,          1,           0,       -1 },
-   { "ncmpcpp",  NULL,       NULL,       0,            1,          1,           0,       -1 },
-   { "Thunar",   NULL,       NULL,       1 << 3,       0,          0,          -1,       -1 },
-   { NULL,       NULL,   "Event Tester", 0,            0,          0,           1,       -1 }, /* xev */
+   /* class         instance    title       tags mask     isfloating  isterminal  noswallow monitor */
+   { "Gimp",        NULL,       NULL,       1 << 3,       0,          0,           0,       -1 },
+   { "firefox",     NULL,       NULL,       1 << 4,       0,          0,          -1,       -1 },
+   { "qutebrowser", NULL,       NULL,       1 << 4,       0,          0,          -1,       -1 },
+   { "inscape",     NULL,       NULL,       1 << 3,       0,          0,           0,       -1 },
+   { "Anki",        NULL,       NULL,       1 << 3,       0,          0,           1,       -1 },
+   { "Obs",         NULL,       NULL,       1 << 3,       0,          0,           1,       -1 },
+   { "st",          NULL,       NULL,       0,            0,          1,           0,       -1 },
+   { "ncmpcpp",     NULL,       NULL,       0,            1,          1,           0,       -1 },
+   { "Thunar",      NULL,       NULL,       1 << 3,       0,          0,          -1,       -1 },
+   { NULL,          NULL,   "Event Tester", 0,            0,          0,           1,       -1 }, /* xev */
 };
 
 /* layout(s) */
