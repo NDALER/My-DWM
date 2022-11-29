@@ -2,14 +2,14 @@
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int snap      = 12;       /* snap pixel */
-static const unsigned int gappih    = 13;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 13;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 13;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 13;       /* vert outer gap between windows and screen edge */
+static const unsigned int snap      = 5;        /* snap pixel */
+static const unsigned int gappih    = 7;        /* horiz inner gap between windows */
+static const unsigned int gappiv    = 7;        /* vert inner gap between windows */
+static const unsigned int gappoh    = 7;        /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 7;        /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
-static const int attachdirection    = 3;    /* 0 default, 1 above, 2 aside, 3 below, 4 bottom, 5 top */
+static const int attachdirection    = 3;        /* 0 default, 1 above, 2 aside, 3 below, 4 bottom, 5 top */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {"Firacode nerd font mono:pixelsize=13.5:antialias=true:autohint=true", "Noto Sans JP:size=12", };
@@ -130,6 +130,7 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
    /* modifier                        chain key    key                 function            argument */
+   { MODKEY|ShiftMask,                -1,          XK_b,               toggleborder,       {0} },
    { MODKEY,                          -1,          XK_x,               movecenter,         {0} },
    { MODKEY,                          -1,          XK_s,               togglesticky,       {0} },
    { MODKEY,                          -1,          XK_i,               shiftviewclients,   { .i = -1 } },
@@ -178,8 +179,10 @@ static Key keys[] = {
    { MODKEY|ShiftMask,                -1,          XK_minus,           defaultgaps,        {0} },
    { MODKEY,                          -1,          XK_Tab,             view,               {0} },
    { MODKEY,                          -1,          XK_backslash,       view,               {0} },
+   { MODKEY,                          -1,          XK_u,               view,               {0} },
    { MODKEY,                          -1,          XK_Escape,          killclient,         {0} },
    { MODKEY,                          -1,          XK_BackSpace,       killclient,         {0} },
+   { MODKEY,                          -1,          XK_y,               killclient,         {0} },
    { MODKEY,                          -1,          XK_t,               setlayout,          {.v = &layouts[0]} },
    /* { MODKEY,                          -1,          XK_f,               setlayout,          {.v = &layouts[1]} }, */
    /* { MODKEY,                          -1,          XK_n,               setlayout,          {.v = &layouts[2]} }, */
