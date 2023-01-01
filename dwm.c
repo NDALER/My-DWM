@@ -1170,6 +1170,7 @@ grabkeys(void)
 		unsigned int modifiers[] = { 0, LockMask, numlockmask, numlockmask|LockMask };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		KeyCode code;
 		KeyCode chain;
 
@@ -1190,6 +1191,12 @@ grabkeys(void)
 		KeySym *syms;
 
 		XUngrabKey(dpy, AnyKey, AnyModifier, root);
+=======
+		int start, end, skip;
+		KeySym *syms;
+
+		XUngrabKey(dpy, AnyKey, AnyModifier, root);
+>>>>>>> master
 		XDisplayKeycodes(dpy, &start, &end);
 		syms = XGetKeyboardMapping(dpy, start, end - start + 1, &skip);
 		if (!syms)
@@ -1204,6 +1211,7 @@ grabkeys(void)
 							 root, True,
 							 GrabModeAsync, GrabModeAsync);
 		XFree(syms);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 89f9905 (grabkeys: Avoid missing events when a keysym maps to multiple keycodes)
 =======
@@ -1223,6 +1231,8 @@ grabkeys(void)
 			}
 >>>>>>> 830456d (patching keychain)
 >>>>>>> a641b7b (patching keychain)
+=======
+>>>>>>> master
 	}
 }
 
