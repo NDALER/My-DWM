@@ -5,4 +5,4 @@ drw.o
 dwm.o
 util.o
 drw.o
-*.def*
+config.h
