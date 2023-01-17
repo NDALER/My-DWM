@@ -61,19 +61,23 @@ static const Rule rules[] = {
     /* xprop(1):
     * WM_CLASS(STRING) = instance, class
     * WM_NAME(STRING) = title
+    *
+    * use this command to check app class " xprop | grep WM_CLASS "
+    *
         */
-   /* class         instance    title       tags mask     isfloating  isterminal  noswallow monitor */
-   { "Libreoffice", NULL,       NULL,       1 << 2,       0,          0,           1,       -1 },
-   { "Anki",        NULL,       NULL,       1 << 3,       0,          0,           1,       -1 },
-   { "Gimp",        NULL,       NULL,       1 << 3,       0,          0,           1,       -1 },
-   { "Inscape",     NULL,       NULL,       1 << 3,       0,          0,          -1,       -1 },
-   { "Obs",         NULL,       NULL,       1 << 3,       0,          0,           1,       -1 },
-   { "Thunar",      NULL,       NULL,       1 << 3,       0,          0,          -1,       -1 },
-   { "firefox",     NULL,       NULL,       1 << 4,       0,          0,          -1,       -1 },
-   { "qutebrowser", NULL,       NULL,       1 << 4,       0,          0,          -1,       -1 },
-   { "st",          NULL,       NULL,       0,            0,          1,           0,       -1 },
-   { "ncmpcpp",     NULL,       NULL,       0,            1,          1,           0,       -1 },
-   { NULL,          NULL,   "Event Tester", 0,            0,          0,           1,       -1 }, /* xev */
+   /* class                                    instance    title       tags mask     isfloating  isterminal  noswallow monitor */
+   { "libreoffice-startcenter",                NULL,       NULL,       1 << 1,       0,          0,           1,       -1 },
+   { "Gimp",                                   NULL,       NULL,       1 << 2,       0,          0,           1,       -1 },
+   { "Anki",                                   NULL,       NULL,       1 << 3,       0,          0,           1,       -1 },
+   { "Font-manager",                           NULL,       NULL,       1 << 3,       0,          0,           1,       -1 },
+   { "Inkscape",                               NULL,       NULL,       1 << 3,       0,          0,          -1,       -1 },
+   { "Obs",                                    NULL,       NULL,       1 << 3,       0,          0,           1,       -1 },
+   { "Thunar",                                 NULL,       NULL,       1 << 3,       0,          0,           1,       -1 },
+   { "firefox",                                NULL,       NULL,       1 << 4,       0,          0,          -1,       -1 },
+   { "qutebrowser",                            NULL,       NULL,       1 << 4,       0,          0,          -1,       -1 },
+   { "st",                                     NULL,       NULL,       0,            0,          1,           0,       -1 },
+   { "ncmpcpp",                                NULL,       NULL,       0,            1,          1,           0,       -1 },
+   { NULL,                                     NULL,   "Event Tester", 0,            0,          0,           1,       -1 }, /* xev */
 };
 
 /* layout(s) */

@@ -1168,7 +1168,6 @@ grabkeys(void)
 	{
 		unsigned int i, j, k;
 		unsigned int modifiers[] = { 0, LockMask, numlockmask, numlockmask|LockMask };
-<<<<<<< HEAD
 		int start, end, skip;
 		KeySym *syms;
 
@@ -1187,7 +1186,6 @@ grabkeys(void)
 							 root, True,
 							 GrabModeAsync, GrabModeAsync);
 		XFree(syms);
-=======
 		KeyCode code;
 		KeyCode chain;
 
@@ -1201,7 +1199,6 @@ grabkeys(void)
 					XGrabKey(dpy, code, keys[i].mod | modifiers[j], root,
 						True, GrabModeAsync, GrabModeAsync);
 			}
->>>>>>> 830456d (patching keychain)
 	}
 }
 
